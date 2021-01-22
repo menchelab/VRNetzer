@@ -1,6 +1,6 @@
 ## **VRNetzer - A Virtual Reality Framework for Network Visualization and Analytics**
 
-![alt text](static/img/tutorial/DataDiVR_Fig_1b_notext.png)
+![alt text](pictures/DataDiVR_Fig_1b_notext.png)
 
 Performant visualization is key to discovering context in large graphs.
 
@@ -62,7 +62,7 @@ you have now a clone of our database on your local machine.
 
 - edit VRNetzer/Analytics_Module/db_config.py to match the database host and user you created before and save
 
-- right click on VRNetzer/Analytics_Module/runAnalytics_Module.ps1 -> "run with power shell" <br>![alt text](static/img/tutorial/runpowershell.png)
+- right click on VRNetzer/Analytics_Module/runAnalytics_Module.ps1 -> "run with power shell" <br>![alt text](pictures/runpowershell.png)
 
 - if the output of the console window that just opened ends with "Running on http://127.0.0.1:1337/"
 you are good to go, if there are errors you will need to install dependencies.
@@ -87,7 +87,7 @@ you are good to go, if there are errors you will need to install dependencies.
 
 ## **VRNetzer Architecture Overview**
 
-The **VRNetzer** platform consists of 5 Modules:<br>![alt text](static/img/tutorial/architecture.png )
+The **VRNetzer** platform consists of 5 Modules:<br>![alt text](pictures/architecture.png )
 
 ### **VRnet** - the virtual reality module written in Unreal Engine
 
@@ -111,7 +111,7 @@ Now here is what's special about the UI Module:
 In contrast to the Analytics Module, the VR Module CAN initiate communication with the UI Module and call special functions set up in the UI Module.
 This picture illustrates the different routes of communication in the framework. 
 
-![alt text](static/img/tutorial/communication.png )
+![alt text](pictures/communication.png )
 
 
 ### [**Analytics Module** - a Flask/Python webserver](https://github.com/menchelab/UI_Module)
@@ -123,13 +123,13 @@ The Analytics Module is the backend and has
 ### **SQL database**
 
 This is the data base schema:
-![alt text](static/img/tutorial/dataserver_schema.png)
+![alt text](pictures/dataserver_schema.png)
 
 
 ## **Tutorial 1: Using the Uploader to add your own network**
 
 - right click on VRNetzer/ Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" to start the Analytics Module
-- open the web frontend of the Analytics Module in a browser  http://127.0.0.1:1337/swimmer <br> ![alt text](static/img/tutorial/swimmer.png)
+- open the web frontend of the Analytics Module in a browser  http://127.0.0.1:1337/swimmer <br> ![alt text](pictures/swimmer.png)
 - tick "Create Project" and choose a name that doesn't exist in the dropdown menu jet
 - select .csv files to upload, [they must be formatted after these guidelines](#Csv-file-formats)
 - restart the VR Module and load your project 
@@ -144,14 +144,14 @@ The User Interface in the virtual reality module is a website made with jQuery. 
 
 - in [Visual Studio Code](https://code.visualstudio.com/) (or the text editor of your choice) File -> Open Folder -> navigate to your UI Module Folder
 
-- right click on VRNetzer/Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" <br> ![alt text](static/img/tutorial/runpowershell.png)
+- right click on VRNetzer/Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" <br> ![alt text](pictures/runpowershell.png)
 
 - open a chrome browser at http://127.0.0.1:5000/ . This is the main UI to which we will add something in the right-most tab. 
 
-- hit 'Ctrl + Shift + i' to open the developer tools, click on "Network" and tick the "Disable Cache" checkbox. Note the "Console" window, where debugging output is displayed. <br> ![alt text](static/img/tutorial/t2-1.png)
+- hit 'Ctrl + Shift + i' to open the developer tools, click on "Network" and tick the "Disable Cache" checkbox. Note the "Console" window, where debugging output is displayed. <br> ![alt text](pictures/t2-1.png)
 - open `VRNetzer/UI_Module/templates/main.html` in your editor
 - at the end of the file, after` <div id="tabs-7">` add `<button id="MyNewButton"> EXIT </button>`
-- save changes to main.html and refresh the browser by clicking in the red area and hit F5 <br>![alt text](static/img/tutorial/t2-3.png)
+- save changes to main.html and refresh the browser by clicking in the red area and hit F5 <br>![alt text](pictures/t2-3.png)
 - if you now navigate to the right most tab again, the button appeared. It looks grey though, not like the other buttons. 
 
 The different elements of the page are set up in the html documents. All the logic happens in the JavaScript, in the `UI_Module\static\js` folder.
@@ -170,7 +170,7 @@ $(function () {
         });
     });
 ```
-- save and refresh the browser <br> ![alt text](static/img/tutorial/t2-4.png)
+- save and refresh the browser <br> ![alt text](pictures/t2-4.png)
 
 Now that jQuery is aware of the new button the css styling also works. Click it and the console outputs the message so we know it works.
 
@@ -227,8 +227,8 @@ Because the GetSelection call is used for different things, it's arguments conta
 That's it! let's start the VR Module and check if everything works.
 
 * start viveNet.exe
-* open a layout <br>![alt text](static/img/tutorial/t2-5.png)
-* load a selection<br>![alt text](static/img/tutorial/t2-6.png)
+* open a layout <br>![alt text](pictures/t2-5.png)
+* load a selection<br>![alt text](pictures/t2-6.png)
 * click on MyNewButton
 
 You should see some printout in the UI Module console window.
@@ -251,7 +251,7 @@ def my_new_route(db_namespace):
     print(node_ids)
     return jsonify(node_ids)
 ```
-- save `app.py` and bring up the Analytics Module console, it should detect the change and restart automatically <br> ![alt text](static/img/tutorial/t3-1.png)
+- save `app.py` and bring up the Analytics Module console, it should detect the change and restart automatically <br> ![alt text](pictures/t3-1.png)
 
 That’s it! Now we will go back to the UI Module and forward the output of the VR module that we created previously in tutorial 2. <br> For this we will use a POST request.
 
