@@ -40,7 +40,12 @@ Performant visualization is key to discovering context in large graphs.
 
 for a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a SteamVR compatible headset.
 It comes preconfigured to connect to the other modules that we already installed on our server to make it easy for you to get a first impression. 
-It has the ability to upload your own datasets, but we don't recommend it. **Do NOT upload any sensitive data  here**, this is **only for demonstration purposes** and for the whole world to see. We don't guarantee your data's safety! If you want to work with your own data you should go with the [Stand Alone](#Installation-Stand-Alone) version
+It has the ability to upload your own datasets, but we don't recommend it. **Do NOT upload any sensitive data  here**, this is **only for demonstration purposes** and for the whole world to see. We don't guarantee your data's safety! If you want to work with your own data you should go with the [Stand Alone](#Installation-Stand-Alone) version.
+
+## **Take Screenshots and record videos**
+
+If you want you can take screenshots and videos of the running application using nvidia geforce experience, which is a free download for nvidia graphics cards, find it here: [geforce experience](https://www.nvidia.com/de-at/geforce/geforce-experience/).
+After installation the default key combination for taking a screenshot is alt+f1 and to start or stop a video recording you press alt+f9. Depending on your setup you might need to enable the ingame overlay and enable desktop recording in the privacy settings in the geforce experience settings if the hotkeys do not work right away.
 
 ## **Installation: Stand Alone**
 
