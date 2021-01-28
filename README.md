@@ -45,7 +45,7 @@ Performant visualization is key to discovering context in large graphs.
 
 ## **Installation: Quick Start**
 
-for a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a SteamVR compatible headset.
+for a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a SteamVR compatible headset. Please watch this [video](https://youtu.be/W5tW_tb3LGk) that will help to get you sterted.
 It comes preconfigured to connect to the other modules that we already installed on our server to make it easy for you to get a first impression. 
 It has the ability to upload your own datasets, but we don't recommend it. **Do NOT upload any sensitive data  here**, this is **only for demonstration purposes** and for the whole world to see. We don't guarantee your data's safety! If you want to work with your own data you should go with the [Stand Alone](#Installation-Stand-Alone) version.
 
@@ -410,5 +410,6 @@ This list will grow in the future.
 | VRkeyboard | route |  string | opens a keyboard in VR - after user presses ENTER, typed string is returned to a .js function by the same name as route - so you need to create this | 
 | loadSelection | name | string | Deprecated Load selection from csv file |
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W5tW_tb3LGk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
