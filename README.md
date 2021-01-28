@@ -48,9 +48,9 @@ You can [get in touch](vrnetzer@menchelab.com) with us if you would like to use 
 
 ## **Installation: Quick Start**
 
-for a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a SteamVR compatible headset. Please watch this [video](https://youtu.be/W5tW_tb3LGk) that will help to get you sterted.
-It comes preconfigured to connect to the other modules that we already installed on our server to make it easy for you to get a first impression. 
-It has the ability to upload your own datasets, but we don't recommend it. **Do NOT upload any sensitive data  here**, this is **only for demonstration purposes** and for the whole world to see. We don't guarantee your data's safety! If you want to work with your own data you should go with the [Stand Alone](#Installation-Stand-Alone) version.
+For a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a [SteamVR compatible headset](https://store.steampowered.com/app/250820/SteamVR/?l=english). Please watch this [video](https://youtu.be/W5tW_tb3LGk) that will help to get you sterted.
+The VR Module comes preconfigured to connect to the other modules that we already installed on our server to make it easy for you to get a first impression. 
+It has the ability to upload your own datasets, but we don't recommend it. **Do NOT upload any sensitive data here**, this is **only for demonstration purposes** and for the whole world to see. We don't guarantee your data's safety! If you want to work with your own data you should use the [Stand Alone](#Installation-Stand-Alone) version.
 
 ## **Installation: Stand Alone**
 
@@ -171,9 +171,16 @@ The User Interface in the virtual reality module is a website made with jQuery. 
 
 - right click on VRNetzer/Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" <br> ![alt text](pictures/runpowershell.png)
 
-- open a chrome browser at http://127.0.0.1:5000/ . This is the main UI to which we will add something in the right-most tab. 
+- right click on VRNetzer/UI_Module/runUIModule.ps1 -> "run with power shell" 
 
-- hit 'Ctrl + Shift + i' to open the developer tools, click on "Network" and tick the "Disable Cache" checkbox. Note the "Console" window, where debugging output is displayed. <br> ![alt text](pictures/t2-1.png)
+- open the VR Module's config.txt file located at `VRNetzer/VR_Module/viveNet/Content/data` in your text editor and change `"vr":true` to `"vr":false` and `"UIServerAdress":"....."` to  `"UIServerAdress":"http://127.0.0.1:5000/"` or where your UI Module is running and save the file
+- run VR_Modul.exe
+- it might promt you to install DirectXRuntime, follow the instructions
+
+- Once the VR Module opens, you will see the main UI to which we will add something in the right-most tab in the left upper corner of the 3D view.
+- press Alt + Enter to switch from fullscreen to windowed mode.
+
+- click on the user interface in the left corner and hit 'Ctrl + Shift + i' to open the developer tools, click on "Network" and tick the "Disable Cache" checkbox. Note the "Console" window, where debugging output is displayed. <br> ![alt text](pictures/t2-7.png)
 - open `VRNetzer/UI_Module/templates/main.html` in your editor
 - at the end of the file, after` <div id="tabs-7">` add `<button id="MyNewButton"> EXIT </button>`
 - save changes to main.html and refresh the browser by clicking in the red area and hit F5 <br>![alt text](pictures/t2-3.png)
