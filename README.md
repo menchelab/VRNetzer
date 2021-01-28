@@ -121,11 +121,14 @@ This picture illustrates the different routes of communication in the framework.
 
 ### [**Analytics Module** - a Flask/Python webserver](https://github.com/menchelab/UI_Module)
 
-The Analytics Module is the backend and has 
-- **separate routes (URLs) defined for each task** <br> When the UI Module sends a request to one of these, it parses the input parameters, performs calculations, makes database queries and returns it's response to the UI Module.
+The Analytics Module is the backend that performs all the data science tasks. It has 
+- **separate routes (URLs) defined for each task** <br> When the UI Module sends a request to one of these, it parses the input parameters, makes database queries and performs calculations, and finally returns it's response to the UI Module.
 - **it can run on the local machine or on a powerful cloud server** if more power is needed
 
 ### **SQL database**
+
+@poorCeline: Please add short discription about how tables are related
+and maybee point to some python code that illustrates the communication with the database
 
 This is the data base schema:
 ![alt text](pictures/dataserver_schema.png)
