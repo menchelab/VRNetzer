@@ -2,6 +2,9 @@
 
 ![alt text](pictures/DataDiVR_Fig_1b_notext.png)
 
+**Note:** This project is still in an infant state of development. This is a public beta release, meaning it is not fit to be used in any safety critical applications yet.
+You can [get in touch](vrnetzer@menchelab.com) with us if you would like to use this project as a basis for further development.
+
 Performant visualization is key to discovering context in large graphs.
 
 ## **Content**
@@ -11,6 +14,10 @@ Performant visualization is key to discovering context in large graphs.
 [**Installation: Quick Start**](#Installation-Quick-Start)
 
 [**Installation: Stand Alone**](#Installation-Stand-Alone)
+
+[**Desktop Mode**](#Desktop Mode)
+
+[**Take screenshots and record videos**](#Take screenshots and record videos)
 
 [**VRNetzer Architecture Overview**](#VRNetzer-Architecture-Overview)
 
@@ -82,8 +89,12 @@ you are good to go, if there are errors you will need to install dependencies.
     
 ### **4.) Download the [VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip)** and extract it to "VRNetzer"
 - if you haven't already, make a Steam account and install [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) and test your headset
-- edit VRNetzer/VRnet/viveNet/Content/data/UiServerConfig.txt and change the address to the one where your UI Module is, here http://127.0.0.1:5000/ 
+- edit VRNetzer/VRnet/viveNet/Content/data/Config.txt and change the address to the one where your UI Module is, here http://127.0.0.1:5000/ 
 - run VR_Module.exe
+
+## **Desktop Mode**
+
+It is also possible to run the VR Module in desktop mode which is practical for development tasks or if you do not own a headset.<br>To do so, simply change the value `"vr":false` in the config file of the VR Module to `"vr":true` and restart the VR Module.
 
 ## **Take screenshots and record videos**
 
