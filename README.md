@@ -15,9 +15,9 @@ Performant visualization is key to discovering context in large graphs.
 
 [**Installation: Stand Alone**](#Installation-Stand-Alone)
 
-[**Desktop Mode**](#Desktop Mode)
+[**Desktop Mode**](#Desktop-Mode)
 
-[**Take screenshots and record videos**](#Take screenshots and record videos)
+[**Take screenshots and record videos**](#Take-screenshots-and-record-videos)
 
 [**VRNetzer Architecture Overview**](#VRNetzer-Architecture-Overview)
 
