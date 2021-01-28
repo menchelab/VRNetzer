@@ -2,10 +2,11 @@
 
 ![alt text](pictures/DataDiVR_Fig_1b_notext.png)
 
-**Note:** This project is still in an infant state of development. This is a public beta release, meaning it is not fit to be used in any safety critical applications yet.
-You can [get in touch](vrnetzer@menchelab.com) with us if you would like to use this project as a basis for further development.
 
 Networks provide a powerful representation of complex systems of interacting components. In addition to a wide range of available analytical and computational tools, networks also offer a visual interface for exploring large data in a uniquely intuitive fashion. However, the size and complexity of many networks render static visualizations on common screen or paper sizes impractical and result in proverbial 'hairballs'. Here, we introduce an immersive Virtual Reality (VR) platform that overcomes these limitations and unlocks the full potential of visual, interactive exploration of large networks. Our platform is designed towards maximal customization and extendability, with key features including import of custom code for data analysis, easy integration of external databases, and design of arbitrary user interface elements. As a proof of concept, we show how our platform can be used to interactively explore genome-scale molecular networks for identifying genetic aberrations responsible for rare diseases and develop hypotheses on their respective pathobiological mechanisms. Our platform represents a first-of-its-kind, general purpose VR data exploration platform in which human intuition can work seamlessly together with state-of-the-art analysis methods for large and diverse data. 
+<br>
+**Note:** This project is still in an infant state of development. This is a public beta release, meaning it is not fit to be used in any safety critical applications yet.
+You can [get in touch](vrnetzer@menchelab.com) with us if you would like to use this project as a basis for further development.
 
 ## **Content**
 
@@ -15,7 +16,9 @@ Networks provide a powerful representation of complex systems of interacting com
 
 [**Installation: Stand Alone**](#Installation-Stand-Alone)
 
-[**Desktop Mode**](#Desktop-Mode)
+[**Desktop Mode**](#Desktop-Mode) 
+
+[**Data Logging**](#Data-Logging)
 
 [**Take screenshots and record videos**](#Take-screenshots-and-record-videos)
 
@@ -94,7 +97,10 @@ you are good to go, if there are errors you will need to install dependencies.
 
 ## **Desktop Mode**
 
-It is also possible to run the VR Module in desktop mode which is practical for development tasks or if you do not own a headset.<br>To do so, simply change the value `"vr":false` in the config file of the VR Module to `"vr":true` and restart the VR Module.
+It is possible to run the VR Module in desktop mode which is useful for development tasks but does not provide the full functionality as with a headset.<br>To do so, change the value `"vr":true` in the config file of the VR Module to `"vr":false` and restart the VR Module.
+
+## **Data Logging**
+The VR Module can produce log files that contain a list of all that has happened during a VR session. This produces quite big textfiles and is therefore turned off by default. <br>To enable logging change the value `"logging":false` in the config file of the VR Module to `"logging":true` and restart the VR Module. The log files are generated in `VRNetzer/VR_Module/viveNet/Content/data`.
 
 ## **Take screenshots and record videos**
 
