@@ -148,10 +148,12 @@ All data is stored within a MySQL database.  The following schema shows the mini
 The schema and the related tables are auto-generated and auto-populated upon user upload.  To upload your own network, see [Tutorial 1](https://github.com/menchelab/VRNetzer/blob/main/README.md#Tutorial-1-Using-the-Uploader-to-add-your-own-network).
 
 For advanced users: 
+
 Additionally, you may want to include more data to contextualize your nodes or edges.  For example, in our proof of concept application, we use additional tables to store:
 - hierarchical information of our taxonomic node annotations (attribute_taxonomies)
 - articles mentioning specific genes (articles, nodes_articles)
 - gene expression levels of genes in different tissues (gtex_values)
+
 The possibilities are endless!  Functions to query or manipulate the database are in [tables.py](https://github.com/menchelab/Analytics_Module/blob/master/tables.py) of the Analytics Module.
 
 
@@ -327,7 +329,7 @@ This is a blank POST request that calls the route we created before.
 
 - also in VRNetzer_API.js, in the function `ue.interface.getSelection` put `MyNewPostRequest(data);` instead of `LogOnUIServer(data);`
 
-## Csv file formats ##
+## CSV file formats ##
 
 You can find examples of all used .csv formats [HERE](https://github.com/menchelab/Analytics_Module/tree/master/sample_inputs) to to use as templates for the formatting.
 
@@ -376,9 +378,9 @@ are a list of ID's separated by line breaks
 
 **Labels**
 
-|x_loc|y_loc|z_loc|text|namespace|
+|x_loc|y_loc|z_loc|text|
 |---|---|---|---|---|
-|0.5000000|0.5000000|0.5000000|" C E L L U L A R  C O M P O N E N T S"|5_cell|
+|0.5000000|0.5000000|0.5000000|" C E L L U L A R  C O M P O N E N T S"|
 
 A simple way to add textlabels at certain positions to a specific layout (namespace)
 
@@ -389,6 +391,7 @@ A simple way to add textlabels at certain positions to a specific layout (namesp
 |16048|4416|DISEASE|"Down syndrome"|NULL|
 
 Every node id can be associated with several attributes.
+
 **Note**
 
 ## **VRnet API Documentation**
