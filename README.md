@@ -144,19 +144,23 @@ The Analytics Module is the backend that performs all the data science tasks. It
 
 ### **SQL database**
 
-@poorCeline: Please add short discription about how tables are related
-and maybee point to some python code that illustrates the communication with the database
+All data is stored within a MySQL database.  The following schema shows the minimal set of tables that describes one single network. ![alt text](pictures/dataserver_schema.png)
+The schema and the related tables are auto-generated and auto-populated upon user upload.  To upload your own network, see the section [LINK HERE].
 
-This is the data base schema:
-![alt text](pictures/dataserver_schema.png)
+For advanced users: 
+Additionally, you may want to include more data to contextualize your nodes or edges.  For example, in our proof of concept application, we use additional tables to store:
+- hierarchical information of our taxonomic node annotations (attribute_taxonomies)
+- articles mentioning specific genes (articles, nodes_articles)
+- gene expression levels of genes in different tissues (gtex_values)
+The possibilities are endless!  Functions to query or manipulate the database are in tables.py.
 
 
 ## **Tutorial 1: Using the Uploader to add your own network**
 
 - right click on VRNetzer/ Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" to start the Analytics Module
 - open the web frontend of the Analytics Module in a browser  http://127.0.0.1:1337/swimmer <br> ![alt text](pictures/swimmer.png)
-- tick "Create Project" and choose a name that doesn't exist in the dropdown menu jet
-- select .csv files to upload, [they must be formatted after these guidelines](#Csv-file-formats)
+- tick "Create Project" and choose a name that isn't already in the dropdown menu
+- select .csv files to upload, [they must be formatted after these guidelines](#Csv-file-formats)  At minimum, you must have a file to describe the nodes and their positions.  If you have a node list, you can also upload af ile to describe the attributes of the nodes.
 - restart the VR Module and load your project 
 
 
