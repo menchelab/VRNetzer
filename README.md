@@ -145,14 +145,14 @@ The Analytics Module is the backend that performs all the data science tasks. It
 ### **SQL database**
 
 All data is stored within a MySQL database.  The following schema shows the minimal set of tables that describes one single network. ![alt text](pictures/dataserver_schema.png)
-The schema and the related tables are auto-generated and auto-populated upon user upload.  To upload your own network, see the section [LINK HERE].
+The schema and the related tables are auto-generated and auto-populated upon user upload.  To upload your own network, see the section https://github.com/menchelab/VRNetzer/blob/main/README.md#Tutorial-1-Using-the-Uploader-to-add-your-own-network.
 
 For advanced users: 
 Additionally, you may want to include more data to contextualize your nodes or edges.  For example, in our proof of concept application, we use additional tables to store:
 - hierarchical information of our taxonomic node annotations (attribute_taxonomies)
 - articles mentioning specific genes (articles, nodes_articles)
 - gene expression levels of genes in different tissues (gtex_values)
-The possibilities are endless!  Functions to query or manipulate the database are in tables.py.
+The possibilities are endless!  Functions to query or manipulate the database are in https://github.com/menchelab/Analytics_Module/blob/master/tables.py.
 
 
 ## **Tutorial 1: Using the Uploader to add your own network**
