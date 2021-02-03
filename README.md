@@ -2,7 +2,11 @@
 
 ![alt text](pictures/DataDiVR_Fig_1b_notext.png)
 
-Performant visualization is key to discovering context in large graphs.
+
+Networks provide a powerful representation of complex systems of interacting components. In addition to a wide range of available analytical and computational tools, networks also offer a visual interface for exploring large data in a uniquely intuitive fashion. However, the size and complexity of many networks render static visualizations on common screen or paper sizes impractical and result in proverbial 'hairballs'. Here, we introduce an immersive Virtual Reality (VR) platform that overcomes these limitations and unlocks the full potential of visual, interactive exploration of large networks. Our platform is designed towards maximal customization and extendability, with key features including import of custom code for data analysis, easy integration of external databases, and design of arbitrary user interface elements. As a proof of concept, we show how our platform can be used to interactively explore genome-scale molecular networks for identifying genetic aberrations responsible for rare diseases and develop hypotheses on their respective pathobiological mechanisms. Our platform represents a first-of-its-kind, general purpose VR data exploration platform in which human intuition can work seamlessly together with state-of-the-art analysis methods for large and diverse data. 
+<br>
+**Note:** This project is still in an infant state of development. This is a public beta release, meaning it is not fit to be used in any safety critical applications yet.
+You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like to use this project as a basis for further development.
 
 ## **Content**
 
@@ -11,6 +15,12 @@ Performant visualization is key to discovering context in large graphs.
 [**Installation: Quick Start**](#Installation-Quick-Start)
 
 [**Installation: Stand Alone**](#Installation-Stand-Alone)
+
+[**Desktop Mode**](#Desktop-Mode) 
+
+[**Data Logging**](#Data-Logging)
+
+[**Take screenshots and record videos**](#Take-screenshots-and-record-videos)
 
 [**VRNetzer Architecture Overview**](#VRNetzer-Architecture-Overview)
 
@@ -38,9 +48,9 @@ Performant visualization is key to discovering context in large graphs.
 
 ## **Installation: Quick Start**
 
-for a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a SteamVR compatible headset.
-It comes preconfigured to connect to the other modules that we already installed on our server to make it easy for you to get a first impression. 
-It has the ability to upload your own datasets, but we don't recommend it. **Do NOT upload any sensitive data  here**, this is **only for demonstration purposes** and for the whole world to see. We don't guarantee your data's safety! If you want to work with your own data you should go with the [Stand Alone](#Installation-Stand-Alone) version
+For a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a [SteamVR compatible headset](https://store.steampowered.com/app/250820/SteamVR/?l=english). Please watch this [video](https://youtu.be/W5tW_tb3LGk) that will help to get you sterted.
+The VR Module comes preconfigured to connect to the other modules that we already installed on our server to make it easy for you to get a first impression. 
+It has the ability to upload your own datasets, but we don't recommend it. **Do NOT upload any sensitive data here**, this is **only for demonstration purposes** and for the whole world to see. We don't guarantee your data's safety! If you want to work with your own data you should use the [Stand Alone](#Installation-Stand-Alone) version.
 
 ## **Installation: Stand Alone**
 
@@ -82,8 +92,20 @@ you are good to go, if there are errors you will need to install dependencies.
     
 ### **4.) Download the [VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip)** and extract it to "VRNetzer"
 - if you haven't already, make a Steam account and install [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) and test your headset
-- edit VRNetzer/VRnet/viveNet/Content/data/UiServerConfig.txt and change the address to the one where your UI Module is, here http://127.0.0.1:5000/ 
+- edit VRNetzer/VRnet/viveNet/Content/data/Config.txt and change the address to the one where your UI Module is, here http://127.0.0.1:5000/ 
 - run VR_Module.exe
+
+## **Desktop Mode**
+
+It is possible to run the VR Module in desktop mode which is useful for development tasks but does not provide the full functionality as with a headset.<br>To do so, change the value `"vr":true` in the config file of the VR Module to `"vr":false` and restart the VR Module.
+
+## **Data Logging**
+The VR Module can produce log files that contain a list of all that has happened during a VR session. This produces quite big textfiles and is therefore turned off by default. <br>To enable logging change the value `"logging":false` in the config file of the VR Module to `"logging":true` and restart the VR Module. The log files are generated in `VRNetzer/VR_Module/viveNet/Content/data`.
+
+## **Take screenshots and record videos**
+
+If you want you can take screenshots and videos of the running application using nvidia geforce experience, which is a free download for nvidia graphics cards, find it here: [geforce experience](https://www.nvidia.com/de-at/geforce/geforce-experience/).
+After installation the default key combination for taking a screenshot is alt+f1 and to start or stop a video recording you press alt+f9. Depending on your setup you might need to enable the ingame overlay and enable desktop recording in the privacy settings in the geforce experience settings if the hotkeys do not work right away.
 
 ## **VRNetzer Architecture Overview**
 
@@ -116,22 +138,32 @@ This picture illustrates the different routes of communication in the framework.
 
 ### [**Analytics Module** - a Flask/Python webserver](https://github.com/menchelab/UI_Module)
 
-The Analytics Module is the backend and has 
-- **separate routes (URLs) defined for each task** <br> When the UI Module sends a request to one of these, it parses the input parameters, performs calculations, makes database queries and returns it's response to the UI Module.
+The Analytics Module is the backend that performs all the data science tasks. It has 
+- **separate routes (URLs) defined for each task** <br> When the UI Module sends a request to one of these, it parses the input parameters, makes database queries and performs calculations, and finally returns it's response to the UI Module.
 - **it can run on the local machine or on a powerful cloud server** if more power is needed
 
 ### **SQL database**
 
-This is the data base schema:
-![alt text](pictures/dataserver_schema.png)
+All data is stored within a MySQL database.  The following schema shows the minimal set of tables that describes one single network. <img src="pictures/dataserver_schema.png" alt="drawing" width="75%" class="center"/>
+
+The schema and the related tables are auto-generated and auto-populated upon user upload.  To upload your own network, see [Tutorial 1](https://github.com/menchelab/VRNetzer/blob/main/README.md#Tutorial-1-Using-the-Uploader-to-add-your-own-network).
+
+For advanced users: 
+
+Additionally, you may want to include more data to contextualize your nodes or edges.  For example, in our proof of concept application, we use additional tables to store:
+- hierarchical information of our taxonomic node annotations (attribute_taxonomies)
+- articles mentioning specific genes (articles, nodes_articles)
+- gene expression levels of genes in different tissues (gtex_values)
+
+The possibilities are endless!  Functions to query or manipulate the database are in [tables.py](https://github.com/menchelab/Analytics_Module/blob/master/tables.py) of the Analytics Module.
 
 
 ## **Tutorial 1: Using the Uploader to add your own network**
 
 - right click on VRNetzer/ Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" to start the Analytics Module
 - open the web frontend of the Analytics Module in a browser  http://127.0.0.1:1337/swimmer <br> ![alt text](pictures/swimmer.png)
-- tick "Create Project" and choose a name that doesn't exist in the dropdown menu jet
-- select .csv files to upload, [they must be formatted after these guidelines](#Csv-file-formats)
+- tick "Create Project" and choose a name that isn't already in the dropdown menu
+- select .csv files to upload, [they must be formatted after these guidelines](#Csv-file-formats)  At minimum, you must have a file to describe the nodes and their positions.  If you have a node list, you can also upload af ile to describe the attributes of the nodes.
 - restart the VR Module and load your project 
 
 
@@ -146,9 +178,16 @@ The User Interface in the virtual reality module is a website made with jQuery. 
 
 - right click on VRNetzer/Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" <br> ![alt text](pictures/runpowershell.png)
 
-- open a chrome browser at http://127.0.0.1:5000/ . This is the main UI to which we will add something in the right-most tab. 
+- right click on VRNetzer/UI_Module/runUIModule.ps1 -> "run with power shell" 
 
-- hit 'Ctrl + Shift + i' to open the developer tools, click on "Network" and tick the "Disable Cache" checkbox. Note the "Console" window, where debugging output is displayed. <br> ![alt text](pictures/t2-1.png)
+- open the VR Module's config.txt file located at `VRNetzer/VR_Module/viveNet/Content/data` in your text editor and change `"vr":true` to `"vr":false` and `"UIServerAdress":"....."` to  `"UIServerAdress":"http://127.0.0.1:5000/"` or where your UI Module is running and save the file
+- run VR_Modul.exe
+- it might promt you to install DirectXRuntime, follow the instructions
+
+- Once the VR Module opens, you will see the main UI to which we will add something in the right-most tab in the left upper corner of the 3D view.
+- press Alt + Enter to switch from fullscreen to windowed mode.
+
+- click on the user interface in the left corner and hit 'Ctrl + Shift + i' to open the developer tools, click on "Network" and tick the "Disable Cache" checkbox. Note the "Console" window, where debugging output is displayed. <br> ![alt text](pictures/t2-7.png)
 - open `VRNetzer/UI_Module/templates/main.html` in your editor
 - at the end of the file, after` <div id="tabs-7">` add `<button id="MyNewButton"> EXIT </button>`
 - save changes to main.html and refresh the browser by clicking in the red area and hit F5 <br>![alt text](pictures/t2-3.png)
@@ -291,7 +330,7 @@ This is a blank POST request that calls the route we created before.
 
 - also in VRNetzer_API.js, in the function `ue.interface.getSelection` put `MyNewPostRequest(data);` instead of `LogOnUIServer(data);`
 
-## Csv file formats ##
+## CSV file formats ##
 
 You can find examples of all used .csv formats [HERE](https://github.com/menchelab/Analytics_Module/tree/master/sample_inputs) to to use as templates for the formatting.
 
@@ -340,9 +379,9 @@ are a list of ID's separated by line breaks
 
 **Labels**
 
-|x_loc|y_loc|z_loc|text|namespace|
+|x_loc|y_loc|z_loc|text|
 |---|---|---|---|---|
-|0.5000000|0.5000000|0.5000000|" C E L L U L A R  C O M P O N E N T S"|5_cell|
+|0.5000000|0.5000000|0.5000000|" C E L L U L A R  C O M P O N E N T S"|
 
 A simple way to add textlabels at certain positions to a specific layout (namespace)
 
@@ -353,6 +392,7 @@ A simple way to add textlabels at certain positions to a specific layout (namesp
 |16048|4416|DISEASE|"Down syndrome"|NULL|
 
 Every node id can be associated with several attributes.
+
 **Note**
 
 ## **VRnet API Documentation**
@@ -391,5 +431,6 @@ This list will grow in the future.
 | VRkeyboard | route |  string | opens a keyboard in VR - after user presses ENTER, typed string is returned to a .js function by the same name as route - so you need to create this | 
 | loadSelection | name | string | Deprecated Load selection from csv file |
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W5tW_tb3LGk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
