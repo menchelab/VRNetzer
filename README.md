@@ -32,6 +32,8 @@ You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like 
 
 [**VRnet API Documentation**](#VRnet-API-Documentation)
 
+[**Dependencies**](#Dependencies)
+
 [**License**](#License)
 
 
@@ -50,13 +52,15 @@ You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like 
  - HTC VIVE VR Headset + controllers
  - OCULUS QUEST + controllers
 
-## **Installation: Quick Start**
+## **Installation: Quick Start** 
+Time required ~ 10min
 
 For a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a [SteamVR compatible headset](https://store.steampowered.com/app/250820/SteamVR/?l=english). Please watch this [video](https://youtu.be/W5tW_tb3LGk) that will help to get you started.
 The VR Module comes preconfigured to connect to the other modules that we already installed on our server to make it easy for you to get a first impression. 
 It has the ability to upload your own datasets, but we don't recommend it. **Do NOT upload any sensitive data here**, this is **only for demonstration purposes** and for the whole world to see. We don't guarantee your data's safety! If you want to work with your own data you should use the [Stand Alone](#Installation-Stand-Alone) version.
 
-## **Installation: Stand Alone**
+## **Installation: Stand Alone** 
+Time required ~ 60min
 
 However, if you want to implement your own datasets and functionalities, you can also **run everything localy on your machine (the SAFE option if you are dealing with sensitive data)** or run the Analytics Module and UI Module on a networkserver or cloud service (if you need scalability and processing power).<br>Here is a step by step guide how to do a local installation on a windows computer. Note that the Analytics Module and the UI Module can also run on a (linux) server,
 while the VR Module needs to run on a windows 10 machine as gaming hardware is required for Virtual Reality which is best supported under windows.
@@ -434,6 +438,14 @@ This list will grow in the future.
 | ReLayout | node list object | json   | show newly created layout of subset in VR (this resorts the link list) |
 | VRkeyboard | route |  string | opens a keyboard in VR - after user presses ENTER, typed string is returned to a .js function by the same name as route - so you need to create this | 
 | loadSelection | name | string | Deprecated Load selection from csv file |
+
+## **Dependencies**
+
+| **Analytics Module** |**UI Module** |**VR Module** |
+|---|---|---|
+|Win, Mac, Linux|Win, Mac, Linux|Win 10|
+|pyton==3.6 <br> click==7.1.2 <br> decorator==4.4.2 <br> fisher==0.1.9 <br> Flask==1.1.2 <br> Flask-Cors==3.0.8 <br> itsdangerous==1.1.0 <br> Jinja2==2.11.2 <br> MarkupSafe==1.1.1 <br> networkx==2.4 <br> numpy==1.19.4 <br> pandas==1.2.0 <br> PyMySQL==0.9.3 <br> python-dateutil==2.8.1 <br> pytz==2020.5 <br> six==1.15.0 <br> Werkzeug==0.16.1 <br> jquery==3.4.1 <br> jquery-ui | pyton==3.6 <br> Flask==1.1.2 <br> Flask-Cors==3.0.8 <br> jquery==3.4.1 <br> jquery-ui <br> d3v4 | Direct X Runtime  <br> SteamVR|
+
 
 
 ## **License**
