@@ -452,4 +452,4 @@ This list will grow in the future.
 
 Copyright (c) 2021 Menche Lab
 
-This project is licensed under the terms of the MIT license. Check the [LICENSE.MD](LICENSE.md) file for details
+This project is licensed under the terms of the MIT license. Check theLICENSE.md file for details.
