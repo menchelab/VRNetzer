@@ -5,7 +5,7 @@
 
 Networks provide a powerful representation of complex systems of interacting components. In addition to a wide range of available analytical and computational tools, networks also offer a visual interface for exploring large data in a uniquely intuitive fashion. However, the size and complexity of many networks render static visualizations on common screen or paper sizes impractical and result in proverbial 'hairballs'. Here, we introduce an immersive Virtual Reality (VR) platform that overcomes these limitations and unlocks the full potential of visual, interactive exploration of large networks. Our platform is designed towards maximal customization and extendability, with key features including import of custom code for data analysis, easy integration of external databases, and design of arbitrary user interface elements. As a proof of concept, we show how our platform can be used to interactively explore genome-scale molecular networks for identifying genetic aberrations responsible for rare diseases and develop hypotheses on their respective pathobiological mechanisms. Our platform represents a first-of-its-kind, general purpose VR data exploration platform in which human intuition can work seamlessly together with state-of-the-art analysis methods for large and diverse data. 
 <br>
-**Note:** This project is still in an infant state of development. This is a public beta release, meaning it is not fit to be used in any safety critical applications yet.
+**Note:** This project is still in an infant state of development. This is a public beta release, meaning it is not fit to be used in any critical applications yet.
 You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like to use this project as a basis for further development.
 
 ## **Content**
@@ -31,6 +31,10 @@ You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like 
 [**Tutorial 3: Creating a route on the backend**](#Tutorial-3-Creating-a-route-on-the-backend)
 
 [**VRnet API Documentation**](#VRnet-API-Documentation)
+
+[**License**](#License)
+
+
 
 
 
@@ -380,7 +384,7 @@ are a list of ID's separated by line breaks
 **Labels**
 
 |x_loc|y_loc|z_loc|text|
-|---|---|---|---|---|
+|---|---|---|---|
 |0.5000000|0.5000000|0.5000000|" C E L L U L A R  C O M P O N E N T S"|
 
 A simple way to add textlabels at certain positions to a specific layout (namespace)
@@ -433,4 +437,24 @@ This list will grow in the future.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/W5tW_tb3LGk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+#**License**
 
+Copyright (c) <2021> <Menche Lab>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
