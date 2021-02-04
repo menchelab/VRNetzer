@@ -52,7 +52,7 @@ You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like 
 
 ## **Installation: Quick Start**
 
-For a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a [SteamVR compatible headset](https://store.steampowered.com/app/250820/SteamVR/?l=english). Please watch this [video](https://youtu.be/W5tW_tb3LGk) that will help to get you sterted.
+For a quick start, you can just [download the VR Module executable](https://menchelab.com/VRNetzer/VR_Module.zip) and run VR_Module.exe on your windows computer with a [SteamVR compatible headset](https://store.steampowered.com/app/250820/SteamVR/?l=english). Please watch this [video](https://youtu.be/W5tW_tb3LGk) that will help to get you started.
 The VR Module comes preconfigured to connect to the other modules that we already installed on our server to make it easy for you to get a first impression. 
 It has the ability to upload your own datasets, but we don't recommend it. **Do NOT upload any sensitive data here**, this is **only for demonstration purposes** and for the whole world to see. We don't guarantee your data's safety! If you want to work with your own data you should use the [Stand Alone](#Installation-Stand-Alone) version.
 
@@ -115,7 +115,7 @@ After installation the default key combination for taking a screenshot is alt+f1
 
 The **VRNetzer** platform consists of 5 Modules:<br>![alt text](pictures/architecture.png )
 
-### **VRnet** - the virtual reality module written in Unreal Engine
+### **VRNet** - the virtual reality module written in Unreal Engine
 
 Unreal Engine is one of the industry leaders in the videogame world. We chose it as the base for our VR Module for it's astounding graphics performance, continuous support of upcoming VR hardware and because it's open source.
 
@@ -435,11 +435,10 @@ This list will grow in the future.
 | VRkeyboard | route |  string | opens a keyboard in VR - after user presses ENTER, typed string is returned to a .js function by the same name as route - so you need to create this | 
 | loadSelection | name | string | Deprecated Load selection from csv file |
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/W5tW_tb3LGk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-#**License**
+## **License**
 
-Copyright (c) <2021> <Menche Lab>
+Copyright (c) 2021 Menche Lab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
