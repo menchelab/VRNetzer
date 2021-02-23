@@ -455,4 +455,14 @@ Copyright (c) 2021 Menche Lab
 This project is licensed under the terms of the MIT license. Check the LICENSE.md file for details.
 <br>
 <br>
+This Readme:
+<br>
 [![DOI](https://zenodo.org/badge/331998963.svg)](https://zenodo.org/badge/latestdoi/331998963)
+<br>
+UI Module:
+<br>
+[![DOI](https://zenodo.org/badge/327021828.svg)](https://zenodo.org/badge/latestdoi/327021828)
+<br>
+Analytics Module:
+<br>
+[![DOI](https://zenodo.org/badge/213907077.svg)](https://zenodo.org/badge/latestdoi/213907077)
