@@ -447,9 +447,9 @@ This list will grow in the future.
 
 ## **Data availability**
 
-| **source** |**url** |**version/realease date*** |
+| **source** |**url** |**version/realease date** |
 |---|---|---|
-|GO taxonomy <br> GO annotations <br> DO taxonomy <br> DisGeNET <br> OMIM <br> HPO annotation <br> HPO taxonomy <br> KeGG <br> BioGRID <br> REACTOME <br> Gtex data <br> Pubmed articles from INDRA <br> INDRA <br> HIPPIE PPIs | http://geneontology.org/docs/download-ontology/ <br> http://current.geneontology.org/products/pages/downloads.html <br> https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/main/src/ontology/releases <br> https://www.disgenet.org/downloads <br> https://www.omim.org/ <br> https://hpo.jax.org/app/download/annotation <br> https://hpo.jax.org/app/download/ontology <br> https://www.genome.jp/kegg/genes.html <br> https://downloads.thebiogrid.org/ <br> https://reactome.org/download-data <br> https://gtexportal.org/home/datasets <br> from INDRA module <br> https://github.com/sorgerlab/indra <br> http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/download.php | Mar 2019 <br> Mar 2019 <br> Dec 2018 <br> Dec 2018 <br> Feb 2019 <br> Sep 2018 <br> Sep 2018 <br> Feb 2019 <br> Jun 2019 <br> Jul 2019 <br> V7 <br> Jul 2019 <br> 1.12.0 <br> Jul 2017 |
+|GO taxonomy <br> <br> GO annotations <br> DO taxonomy <br> DisGeNET <br> OMIM <br> HPO annotation <br> HPO taxonomy <br> KeGG <br> BioGRID <br> REACTOME <br> Gtex data <br> Pubmed articles from INDRA <br> INDRA <br> HIPPIE PPIs | http://geneontology.org/docs/download-ontology/ <br> http://current.geneontology.org/products/pages/downloads.html <br> https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/main/src/ontology/releases <br> https://www.disgenet.org/downloads <br> https://www.omim.org/ <br> https://hpo.jax.org/app/download/annotation <br> https://hpo.jax.org/app/download/ontology <br> https://www.genome.jp/kegg/genes.html <br> https://downloads.thebiogrid.org/ <br> https://reactome.org/download-data <br> https://gtexportal.org/home/datasets <br> from INDRA module <br> https://github.com/sorgerlab/indra <br> http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/download.php | Mar 2019 <br> <br> Mar 2019 <br> Dec 2018 <br> Dec 2018 <br> Feb 2019 <br> Sep 2018 <br> Sep 2018 <br> Feb 2019 <br> Jun 2019 <br> Jul 2019 <br> V7 <br> Jul 2019 <br> 1.12.0 <br> Jul 2017 |
 
 ## **License**
 
