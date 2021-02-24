@@ -440,13 +440,18 @@ This list will grow in the future.
 | loadSelection | name | string | Deprecated Load selection from csv file |
 
 ## **Dependencies**
-
 | **Analytics Module** |**UI Module** |**VR Module** |
 |---|---|---|
 |Win, Mac, Linux|Win, Mac, Linux|Win 10|
 |pyton==3.6 <br> click==7.1.2 <br> decorator==4.4.2 <br> fisher==0.1.9 <br> Flask==1.1.2 <br> Flask-Cors==3.0.8 <br> itsdangerous==1.1.0 <br> Jinja2==2.11.2 <br> MarkupSafe==1.1.1 <br> networkx==2.4 <br> numpy==1.19.4 <br> pandas==1.2.0 <br> PyMySQL==0.9.3 <br> python-dateutil==2.8.1 <br> pytz==2020.5 <br> six==1.15.0 <br> Werkzeug==0.16.1 <br> jquery==3.4.1 <br> jquery-ui | pyton==3.6 <br> Flask==1.1.2 <br> Flask-Cors==3.0.8 <br> jquery==3.4.1 <br> jquery-ui <br> d3v4 | Direct X Runtime  <br> SteamVR|
 
+## **Data availability**
 
+| **source** |**url** |**version/realease date*** |
+|---|---|---|
+|GO taxonomy <br> GO annotations <br> DO taxonomy <br> DisGeNET <br> OMIM <br> HPO annotation <br> HPO taxonomy <br> KeGG <br> BioGRID <br> REACTOME <br> Gtex data <br> Pubmed articles from INDRA <br> INDRA <br> HIPPIE PPIs <br>  
+| http://geneontology.org/docs/download-ontology/ <br> http://current.geneontology.org/products/pages/downloads.html <br> https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/main/src/ontology/releases <br> https://www.disgenet.org/downloads <br> https://www.omim.org/ <br> https://hpo.jax.org/app/download/annotation <br> https://hpo.jax.org/app/download/ontology <br> https://www.genome.jp/kegg/genes.html <br> https://downloads.thebiogrid.org/ <br> https://reactome.org/download-data <br> https://gtexportal.org/home/datasets <br> from INDRA module <br> https://github.com/sorgerlab/indra <br> http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/download.php <br> 
+| Mar 2019 <br> Mar 2019 <br> Dec 2018 <br> Dec 2018 <br> Feb 2019 <br> Sep 2018 <br> Sep 2018 <br> Feb 2019 <br> Jun 2019 <br> Jul 2019 <br> V7 <br> Jul 2019 <br> 1.12.0 <br> Jul 2017 |
 
 ## **License**
 
