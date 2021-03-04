@@ -454,7 +454,7 @@ This list will grow in the future.
 |---|---|---|
 |GO taxonomy | http://geneontology.org/docs/download-ontology/ |  Mar 2019 |
 |GO annotations|http://current.geneontology.org/products/pages/downloads.html|Mar 2019 |
-|DO taxonomy|https://github.com/DiseaseOntology/HumanDiseaseOntology/ <br> tree/main/src/ontology/releases| Dec 2018|
+|DO taxonomy|https://github.com/DiseaseOntology/HumanDiseaseOntology/<br>tree/main/src/ontology/releases| Dec 2018|
 |DisGeNET|https://www.disgenet.org/downloads |Dec 2018|
 |OMIM |https://www.omim.org/ |Feb 2019|
 |HPO taxonomy| https://hpo.jax.org/app/download/ontology|Sep 2018|
@@ -463,7 +463,7 @@ This list will grow in the future.
 |BioGRID|https://downloads.thebiogrid.org/|Jun 2019|
 |REACTOME|https://reactome.org/download-data |Jul 2019|
 |Gtex |https://gtexportal.org/home/datasets|V7|
-|Pubmed articles from INDRA|INDRA module||
+|Pubmed articles from INDRA|INDRA module|May 2019|
 |INDRA|https://github.com/sorgerlab/indra|May 2019|
 |HIPPIE (Interactome)|http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/download.php |Jul 2017|
 
