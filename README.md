@@ -453,10 +453,8 @@ This list will grow in the future.
 
 ## **Software**
 
-| **source** | **version** |
-|---|---|
-|Python <br> JavaScript <br>  MySQL <br> EPIC Unreal engine <br> Apache |
-3.6 <br> 1.8.5 <br>  8.0 <br> 4 <br> 2.4.29 (Ubuntu) |
+|---|
+|Python==3.6 <br> JavaScript==1.8.5 <br>  MySQL==8.0 <br> EPIC Unreal engine 4 <br> Apache==2.4.29 (Ubuntu) 
 
 ## **License**
 
