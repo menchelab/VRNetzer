@@ -155,7 +155,7 @@ The Analytics Module is the backend that performs all the data science tasks. It
 
 ### **SQL database**
 
-All data is stored within a MySQL database.  The following schema shows the minimal set of tables that describes one single network. <img src="pictures/dataserver_schema.png" alt="drawing" width="75%" class="center"/>
+All data is stored within a MySQL database.  The following schema shows the minimal set of tables that describes one single network. <img src="pictures/dataserver_schema.jpg" alt="drawing" width="75%" class="center"/>
 
 The schema and the related tables are auto-generated and auto-populated upon user upload.  To upload your own network, see [Tutorial 1](https://github.com/menchelab/VRNetzer/blob/main/README.md#Tutorial-1-Using-the-Uploader-to-add-your-own-network).
 
