@@ -33,6 +33,8 @@ You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like 
 
 [**Tutorial 3: Creating a route on the backend**](#Tutorial-3-Creating-a-route-on-the-backend)
 
+[**USE CASE: Gene prioritization**](#USE CASE: Gene prioritization)
+
 [**VRnet API Documentation**](#VRnet-API-Documentation)
 
 [**Dependencies**](#Dependencies)
