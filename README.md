@@ -424,7 +424,7 @@ Every node id can be associated with several attributes.
 
 ## **USE CASE: Gene prioritization**
 
-Ths refers to the chapter 'Application to prioritization of genomic variants' from the publication
+This refers to the chapter 'Application to prioritization of genomic variants' from the publication
 describing one specific use case for identifying a single disease causing gene out of a set of given variant genes.
 
 In the VRNetzer release 1.1 candidate and seed genes are already contained as a prepared data set.
@@ -441,26 +441,26 @@ From both lists the genes symbols can be clicked to be highlighted in the networ
 the gene panel shows the gene characteristics for individual inspection.
 As described in the publication the sets can be analyzed in terms of their network properties for example.
 In order to show their interconnectivity or lcc size select the network analytics tab on the control panel 
-(turn your right controller to get it) and use the isolate and re-layout functions. (NOTE: the LINKS needs to be loaded)
+(turn your left wrist/controller) and use the isolate and re-layout functions. (NOTE: the LINKS needs to be loaded)
 
 <br> ![alt text](pictures/mainpanel_6.png)
 
-To contextualize the variant genes in the functional set of seeds run the random walk on the side panel.
-It will highlight the variants (shiny red), seeds (shiny yellow) and linker genes (shiny blue) in the network 
-and a bar chart within the side panel showing a list of genes resulting fro the random walk ranked 
+To contextualize the variant genes in the functional set of seeds run the random walk on the 3rd tab of side panel.
+It will highlight the variants (shiny red), seeds (shiny yellow) and linker genes (shiny blue) in the 3D network. 
+A bar chart within the side panel presents a list of genes resulting from the random walk ranked 
 by their visiting probabilty.
-Depending on the choice of the restart parameter (high r means higher localization around initial gene set) you will find DOCK2 
+Depending on the choice of the restart parameter value (high r means higher localization around initial gene set) you will find DOCK2 
 among the first few candidates.
 
 <br> ![alt text](pictures/sidepanel_3.png)
 
 A force-graph layout of the resulting random-walk network can be inspected separately in the 5th tab of the side panel. 
 The color legend is the same as in the 3D network and the nodes are interactive so that clicking on them refers directly to the 
-big network and opens the gene panel.
+3D network where the gene panel opens as well.
 
 <br> ![alt text](pictures/sidepanel_5.png)
 
-Saving your results makes them accessible from utside the VR session here http://127.0.0.1:5000/_side  
+Saving your results makes them accessible from outside the VR session: http://127.0.0.1:5000/_side  
 
 
 
