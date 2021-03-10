@@ -83,6 +83,8 @@ you have now a clone of our database on your local machine.
 
 - edit VRNetzer/Analytics_Module/db_config.py to match the database host and user you created before and save
 
+
+
 - right click on VRNetzer/Analytics_Module/runAnalytics_Module.ps1 -> "run with power shell" <br>![alt text](pictures/runpowershell.png)
 
 - if the output of the console window that just opened ends with "Running on http://127.0.0.1:1337/"
@@ -171,9 +173,22 @@ The possibilities are endless!  Functions to query or manipulate the database ar
 
 ## **Tutorial 1: Using the Uploader to add your own network**
 
+
+WINDOWS
 - right click on VRNetzer/ Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" to start the Analytics Module
-- open the web frontend of the Analytics Module in a browser  http://127.0.0.1:1337/swimmer <br> ![alt text](pictures/swimmer.png)
+- right click on VRNetzer/ UI_Module/run_UI_Module.ps1 -> "run with power shell" to start the UI Module
+- open the web frontend of the UI Module in a browser /http://127.0.0.1:5000/upload 
+
+MAC/LINUX
+- open terminal, cd to Analytics_Module and run app.py with python3
+- open terminal, cd to UI_Module and run json_io.py with python3
+#
+- open the web frontend of the UI Module in a browser /http://127.0.0.1:5000/upload <br> ![alt text](pictures/upload.png)
+
+<!---
 - tick "Create Project" and choose a name that isn't already in the dropdown menu
+-->
+
 - select .csv files to upload, [they must be formatted after these guidelines](#Csv-file-formats)  At minimum, you must have a file to describe the nodes and their positions.  If you have a node list, you can also upload af ile to describe the attributes of the nodes.
 - restart the VR Module and load your project 
 
