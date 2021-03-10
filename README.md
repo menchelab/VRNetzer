@@ -185,7 +185,7 @@ MAC/LINUX
 - open terminal, cd to Analytics_Module and run app.py with python3
 - open terminal, cd to UI_Module and run json_io.py with python3
 #
-- open the web frontend of the UI Module in a browser http://127.0.0.1:5000/upload <br> ![alt text](pictures/upload.png)
+- open the web frontend of the UI Module in a browser http://127.0.0.1:5000/upload <br> ![alt text](pictures/upload.jpg)
 
 <!---
 - tick "Create Project" and choose a name that isn't already in the dropdown menu
