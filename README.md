@@ -33,6 +33,8 @@ You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like 
 
 [**Tutorial 3: Creating a route on the backend**](#Tutorial-3-Creating-a-route-on-the-backend)
 
+[**USE CASE Gene prioritization**](#USE-CASE-Gene-prioritization)
+
 [**VRnet API Documentation**](#VRnet-API-Documentation)
 
 [**Dependencies**](#Dependencies)
@@ -183,7 +185,7 @@ MAC/LINUX
 - open terminal, cd to Analytics_Module and run app.py with python3
 - open terminal, cd to UI_Module and run json_io.py with python3
 #
-- open the web frontend of the UI Module in a browser /http://127.0.0.1:5000/upload <br> ![alt text](pictures/upload.png)
+- open the web frontend of the UI Module in a browser http://127.0.0.1:5000/upload <br> ![alt text](pictures/upload.png)
 
 <!---
 - tick "Create Project" and choose a name that isn't already in the dropdown menu
@@ -420,6 +422,50 @@ A simple way to add textlabels at certain positions to a specific layout (namesp
 Every node id can be associated with several attributes.
 
 **Note**
+
+
+## **USE CASE Gene prioritization**
+
+This refers to the chapter 'Application to prioritization of genomic variants' from the publication
+describing one specific use case for identifying a single disease causing gene out of a set of given variant genes.
+
+In the VRNetzer release 1.1 candidate and seed genes are already contained as a prepared data set.
+For this specific task we include an extra patient panel that looks like this 
+
+<br> ![alt text](pictures/sidepanel_1.png)
+
+It may include patient and diagnosis data and a list of variants.
+The second tab shows the manually curated seed genes:
+
+<br> ![alt text](pictures/sidepanel_2.png)
+
+From both lists the genes symbols can be clicked to be highlighted in the network while 
+the gene panel shows the gene characteristics for individual inspection.
+As described in the publication the sets can be analyzed in terms of their network properties for example.
+In order to show their interconnectivity or lcc size select the network analytics tab on the control panel 
+(turn your left wrist/controller) and use the isolate and re-layout functions. (NOTE: the LINKS needs to be loaded)
+
+<br> ![alt text](pictures/mainpanel_6.png)
+
+To contextualize the variant genes in the functional set of seeds run the random walk on the 3rd tab of side panel.
+It will highlight the variants (shiny red), seeds (shiny yellow) and linker genes (shiny blue) in the 3D network. 
+A bar chart within the side panel presents a list of genes resulting from the random walk ranked 
+by their visiting probabilty.
+Depending on the choice of the restart parameter value (high r means higher localization around initial gene set) you will find DOCK2 
+among the first few candidates.
+
+<br> ![alt text](pictures/sidepanel_3.png)
+
+A force-graph layout of the resulting random-walk network can be inspected separately in the 5th tab of the side panel. 
+The color legend is the same as in the 3D network and the nodes are interactive so that clicking on them refers directly to the 
+3D network where the gene panel opens as well.
+
+<br> ![alt text](pictures/sidepanel_5.png)
+
+Saving your results makes them accessible from outside the VR session: http://127.0.0.1:5000/_side  
+
+
+
 
 ## **VRnet API Documentation**
 
