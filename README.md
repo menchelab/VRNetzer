@@ -33,7 +33,7 @@ You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like 
 
 [**Tutorial 3: Creating a route on the backend**](#Tutorial-3-Creating-a-route-on-the-backend)
 
-[**USE CASE: Gene prioritization**](#USE-CASE:-Gene-prioritization)
+[**USE CASE Gene prioritization**](#USE-CASE-Gene-prioritization)
 
 [**VRnet API Documentation**](#VRnet-API-Documentation)
 
@@ -424,7 +424,7 @@ Every node id can be associated with several attributes.
 **Note**
 
 
-## **USE CASE: Gene prioritization**
+## **USE CASE Gene prioritization**
 
 This refers to the chapter 'Application to prioritization of genomic variants' from the publication
 describing one specific use case for identifying a single disease causing gene out of a set of given variant genes.
