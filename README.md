@@ -73,7 +73,7 @@ while the VR Module needs to run on a windows 10 machine as gaming hardware is r
 ### **1.) Set up a MySql Database**
 
 - download and install [MySql Workbench](https://dev.mysql.com/downloads/workbench/)
-- download the .dump file of our database [from here](https://ucloud.univie.ac.at/index.php/s/mvO5h6AfFyin0Gi)
+- download the .dump file of our database [from here](https://ucloud.univie.ac.at/index.php/s/Hs6ugofOvh6TU0f)
 - Create a new database, user and password and upload .sql file to it
 
 you have now a clone of our database on your local machine.
