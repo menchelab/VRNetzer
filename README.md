@@ -545,7 +545,7 @@ This project is licensed under the terms of the MIT license. Check the LICENSE.m
 <br>
 This Readme:
 <br>
-[![DOI](https://zenodo.org/badge/331998963.svg)](https://zenodo.org/badge/latestdoi/331998963)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4597735.svg)](https://doi.org/10.5281/zenodo.4597735)
 <br>
 UI Module:
 <br>
