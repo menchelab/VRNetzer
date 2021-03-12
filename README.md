@@ -382,7 +382,8 @@ where each line is a node with the following data:
 **Note:** For now, you have to provide XYZ coordinates for the layout. The positions need to be normalised between 0 - 1
 
 RGBA colours range from 0 - 255
-**Note: A value's should be 100.** Bigger values makes nodes glow, smaller values make them darker.
+**Note: "A" (in RGBA) value's should be 100.
+** Bigger values makes nodes glow, smaller values make them darker.
 
 **Link Lists**
 ```
