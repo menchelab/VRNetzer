@@ -142,9 +142,9 @@ MAC/LINUX
 -->
 
 - select .csv files to upload, [they must be formatted after these guidelines](#Csv-file-formats) as sketched in the picture above.  
-- Required is as least a layout file with xyz coordinated (normalized each in [0,1]) and colors you will obtain a 3D point cloud.
+- Required is as least a layout file with xyz coordinated (normalized each in [0,1]) and colors and you will obtain a 3D point cloud.
 - If you add an edge list that refers to the identifiers given in the 1st column of the layout file you will obtain a network with nodes and edges.
-- Uploading a node file with symbols, names and functions/features (optional, can remain empty) you will find the symbols as labels in VR and the node characteristics on the node panel when clicking on a node
+- Uploading a node file with symbols, names and functions/features (optional, can remain empty) you will find the symbols as labels in VR and the node characteristics on the node panel when clicking on a node.
 - restart the VR Module and load your project 
 
 
@@ -369,7 +369,7 @@ This is a blank POST request that calls the route we created before.
 
 You can find examples of all used .csv formats [HERE](https://github.com/menchelab/Analytics_Module/tree/master/sample_inputs) to to use as templates for the formatting.
 
-**Note:** You need to assign **unique node integer IDs (like EntrezID in case of genes) for your files to upload ** 
+**Note:** You need to assign **unique node integer IDs (like EntrezID in case of genes) for your files to upload** 
 <br>**Don't use commas** in string fields, as they are reserved delimiters.
 
 
@@ -387,8 +387,8 @@ where each line is a node with the following data:
 **Note:** Please provide XYZ coordinates for the layout that are normalised between 0 - 1
 
 RGBA colours range from 0 - 255
-**Note: "A" (in RGBA) value's should be 100.
-** Bigger values makes nodes glow, smaller values make them darker.
+**Note:**  "A" (in RGBA) value's should be 100.
+Bigger values makes nodes glow, smaller values make them darker.
 
 **Node Lists**
 
@@ -400,10 +400,10 @@ Please make sure that no commas appear within these fields as the are used as de
 The format could look like this:
 
 |8473|OGT|O-linked N-acetylglucosamine (GlcNAc) transferase|protein coding|3dportrait|
-|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|
 |NodeID|Symbol|Name|Function|Namespace|
 
-Given symbols will appear as lables directly at selected nodes and proximity. 
+Given symbols will appear as labels directly at selected nodes and at nodes in the proximity. 
  
 **Link Lists**
 ```
