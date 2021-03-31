@@ -25,9 +25,9 @@ You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like 
 
 [**Take screenshots and record videos**](#Take-screenshots-and-record-videos)
 
-[**VRNetzer Architecture Overview**](#VRNetzer-Architecture-Overview)
-
 [**Tutorial 1: Using the Uploader to add your own network**](#Tutorial-1-Using-the-Uploader-to-add-your-own-network)
+
+[**VRNetzer Architecture Overview**](#VRNetzer-Architecture-Overview)
 
 [**Tutorial 2: Creating custom User Interfaces**](#Tutorial-2-Creating-custom-User-Interfaces)
 
@@ -403,7 +403,7 @@ The format could look like this:
 |---|---|---|---|---|
 |NodeID|Symbol|Name|Function|Namespace|
 
-Given symbols will appear as labels directly at selected nodes and at nodes in the proximity. 
+Symbols will appear as labels directly at selected nodes and at nodes in the proximity. 
  
 **Link Lists**
 ```
