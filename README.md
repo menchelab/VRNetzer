@@ -122,6 +122,32 @@ The VR Module can produce log files that contain a list of all that has happened
 If you want you can take screenshots and videos of the running application using nvidia geforce experience, which is a free download for nvidia graphics cards, find it here: [geforce experience](https://www.nvidia.com/de-at/geforce/geforce-experience/).
 After installation the default key combination for taking a screenshot is alt+f1 and to start or stop a video recording you press alt+f9. Depending on your setup you might need to enable the ingame overlay and enable desktop recording in the privacy settings in the geforce experience settings if the hotkeys do not work right away.
 
+
+## **Tutorial 1: Using the Uploader to add your own network**
+
+
+WINDOWS
+- right click on VRNetzer/ Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" to start the Analytics Module
+- right click on VRNetzer/ UI_Module/run_UI_Module.ps1 -> "run with power shell" to start the UI Module
+- open the web frontend of the UI Module in a browser /http://127.0.0.1:5000/upload 
+
+MAC/LINUX
+- open terminal, cd to Analytics_Module and run app.py with python3
+- open terminal, cd to UI_Module and run json_io.py with python3
+#
+- open the web frontend of the UI Module in a browser http://127.0.0.1:5000/upload <br> ![alt text](pictures/upload.jpg)
+
+<!---
+- tick "Create Project" and choose a name that isn't already in the dropdown menu
+-->
+
+- select .csv files to upload, [they must be formatted after these guidelines](#Csv-file-formats) as sketched in the picture above.  
+- Required is as least a layout file with xyz coordinated (normalized each in [0,1]) and colors you will obtain a 3D point cloud.
+- If you add an edge list that refers to the identifiers given in the 1st column of the layout file you will obtain a network with nodes and edges.
+- Uploading a node file with symbols, names and functions/features (optional, can remain empty) you will find the symbols as labels in VR and the node characteristics on the node panel when clicking on a node
+- restart the VR Module and load your project 
+
+
 ## **VRNetzer Architecture Overview**
 
 The **VRNetzer** platform consists of 5 Modules:<br>![alt text](pictures/architecture.png )
@@ -174,27 +200,6 @@ Additionally, you may want to include more data to contextualize your nodes or e
 
 The possibilities are endless!  Functions to query or manipulate the database are in [tables.py](https://github.com/menchelab/Analytics_Module/blob/master/tables.py) of the Analytics Module.
 
-
-## **Tutorial 1: Using the Uploader to add your own network**
-
-
-WINDOWS
-- right click on VRNetzer/ Analytics_Module/runAnalyticsModule.ps1 -> "run with power shell" to start the Analytics Module
-- right click on VRNetzer/ UI_Module/run_UI_Module.ps1 -> "run with power shell" to start the UI Module
-- open the web frontend of the UI Module in a browser /http://127.0.0.1:5000/upload 
-
-MAC/LINUX
-- open terminal, cd to Analytics_Module and run app.py with python3
-- open terminal, cd to UI_Module and run json_io.py with python3
-#
-- open the web frontend of the UI Module in a browser http://127.0.0.1:5000/upload <br> ![alt text](pictures/upload.jpg)
-
-<!---
-- tick "Create Project" and choose a name that isn't already in the dropdown menu
--->
-
-- select .csv files to upload, [they must be formatted after these guidelines](#Csv-file-formats)  At minimum, you must have a file to describe the nodes and their positions.  If you have a node list, you can also upload af ile to describe the attributes of the nodes.
-- restart the VR Module and load your project 
 
 
 ## **Tutorial 2: Creating custom User Interfaces**
@@ -364,11 +369,11 @@ This is a blank POST request that calls the route we created before.
 
 You can find examples of all used .csv formats [HERE](https://github.com/menchelab/Analytics_Module/tree/master/sample_inputs) to to use as templates for the formatting.
 
-**Note:** You need to assign **unique node and attribute ID's** if you upload your own data to a new project.
+**Note:** You need to assign **unique node integer IDs (like EntrezID in case of genes) for your files to upload ** 
 <br>**Don't use commas** in string fields, as they are reserved delimiters.
 
 
-**Node Lists** look like this:
+**Layout Lists** look like this:
 ```
 8473,0.4993,0.4544,0.640,188,20,26,100,3dportrait
 ...
@@ -377,14 +382,29 @@ where each line is a node with the following data:
 
 |8473|0.4993|0.4544|0.640|188|20|26|100|3dportrait|
 |---|---|---|---|---|---|---|---|---|
-|NodeID|X-Pos|Y-Pos|Z-Pos|R|G|B|A|Name|
+|NodeID|X-Pos|Y-Pos|Z-Pos|R|G|B|A|Namespace|
 
-**Note:** For now, you have to provide XYZ coordinates for the layout. The positions need to be normalised between 0 - 1
+**Note:** Please provide XYZ coordinates for the layout that are normalised between 0 - 1
 
 RGBA colours range from 0 - 255
 **Note: "A" (in RGBA) value's should be 100.
 ** Bigger values makes nodes glow, smaller values make them darker.
 
+**Node Lists**
+
+It is recommended to provide a Node file that converts NodeIDs given in the Layout file into 
+readable symbols and names. There is also the possibility to fill the 4th column with functions, 
+descriptions or other properties that should show up on the node panel within the VR.
+Please make sure that no commas appear within these fields as the are used as delimiters!
+
+The format could look like this:
+
+|8473|OGT|O-linked N-acetylglucosamine (GlcNAc) transferase|protein coding|3dportrait|
+|---|---|---|---|---|---|---|---|---|
+|NodeID|Symbol|Name|Function|Namespace|
+
+Given symbols will appear as lables directly at selected nodes and proximity. 
+ 
 **Link Lists**
 ```
 1267,2945
@@ -396,7 +416,9 @@ where
 |---|---|
 |Start|End|
 
-for now, only one link list per project is supported
+The identifiers refer to the NodeIDs given in the Layout file.
+For now, unweighted link lists are supported and only one link list per project is allowed. 
+
 
 **Selection Lists**
 
