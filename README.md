@@ -432,9 +432,9 @@ are a list of ID's separated by line breaks
 
 **Labels**
 
-|x_loc|y_loc|z_loc|text|
-|---|---|---|---|
-|0.5000000|0.5000000|0.5000000|" C E L L U L A R  C O M P O N E N T S"|
+|x_loc|y_loc|z_loc|text|namespace|
+|---|---|---|---|---|
+|0.5000000|0.5000000|0.5000000|C E L L U L A R  C O M P O N E N T S|my_layout|
 
 A simple way to add textlabels at certain positions to a specific layout (namespace)
 
