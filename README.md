@@ -422,10 +422,10 @@ For now, unweighted link lists are supported and only one link list per project 
 **Attributes**
 
 For every node multiple types of attributes can be given.
-Specify the type in namspace (e.g. DISEASE)
+The type can be specified as namespace (e.g. DISEASE).
 One gene can have multiple attributes (such as a gene can be 
-associated to multiple disease) and vice versa. 
-One specific attribute can be distributes over several nodes.
+associated to multiple diseases). And vice versa 
+one specific attribute can be distributed over several nodes.
 
 |node_id|attribute_id|namespace|name|description|
 |---|---|---|---|---|
@@ -437,16 +437,15 @@ One specific attribute can be distributes over several nodes.
 4524|DOID:4535|DISEASE|hypotrichosis|none|
 
 **Note**
-The database structure allows also for attributes that are organized as an ontology. However it is not part of the uploader functionality yet. 
+The database structure allows also attributes that are organized as an ontology tree. However it is not part of the uploader functionality yet. 
 We plan to provide it with the next release.
 
 **Selection Lists**
 
 An important feature are selection lists. 
-They define subsets of your nodes that are of interest.
-Such as a gene subset representing a list of patient variants.
-The can be separately loaded inside the VR to always have the highlighted 
-and they serve as the starting set for several analytical procedures such as random walk seeds.
+They define subsets of your nodes that are of interest for specific task.
+(Such as a gene subset representing a list of patient variants.)
+They can be loaded separately in a VR session to always have them highlighted. Moreover they serve as the initial set for several analytical procedures such as seeds for a random walk.
 
 Selection lists are a sub category of attributes and can be uploaded 
 in the following way:
@@ -458,8 +457,8 @@ in the following way:
 25836|my_ID:2|SELECTION|my_set_2|none|
 4852|my_ID:2|SELECTION|my_set_2|none|
 
-Please provide as attribute_id an user defined ID for your selection and
-give it a name with which it get referenced in the vR session.
+Please provide as attribute_id an user defined ID for your selection.
+The name can be picked up in the VR session.
 
 
 **Labels**
