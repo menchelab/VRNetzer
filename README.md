@@ -419,16 +419,48 @@ where
 The identifiers refer to the NodeIDs given in the Layout file.
 For now, unweighted link lists are supported and only one link list per project is allowed. 
 
+**Attributes**
+
+For every node multiple types of attributes can be given.
+Specify the type in namspace (e.g. DISEASE)
+One gene can have multiple attributes (such as a gene can be 
+associated to multiple disease) and vice versa. 
+One specific attribute can be distributes over several nodes.
+
+|node_id|attribute_id|namespace|name|description|
+|---|---|---|---|---|
+3543|DOID:2825|DISEASE|nose disease|none|
+25836|DOID:2825|DISEASE|nose disease|none|
+4852|DOID:2825|DISEASE|nose disease|none|
+4524|DOID:1936|DISEASE|atherosclerosis|none|
+4524|DOID:7148|DISEASE|rheumatoid arthritis|none|
+4524|DOID:4535|DISEASE|hypotrichosis|none|
+
+**Note**
+The database structure allows also for attributes that are organized as an ontology. However it is not part of the uploader functionality yet. 
+We plan to provide it with the next release.
 
 **Selection Lists**
 
-```
-1849
-2455
-4029
-...
-```
-are a list of ID's separated by line breaks
+An important feature are selection lists. 
+They define subsets of your nodes that are of interest.
+Such as a gene subset representing a list of patient variants.
+The can be separately loaded inside the VR to always have the highlighted 
+and they serve as the starting set for several analytical procedures such as random walk seeds.
+
+Selection lists are a sub category of attributes and can be uploaded 
+in the following way:
+
+|node_id|attribute_id|namespace|name|description|
+|---|---|---|---|---|
+3543|my_ID:1|SELECTION|my_set_1|none|
+4524|my_ID:1|SELECTION|my_set_1|none|
+25836|my_ID:2|SELECTION|my_set_2|none|
+4852|my_ID:2|SELECTION|my_set_2|none|
+
+Please provide as attribute_id an user defined ID for your selection and
+give it a name with which it get referenced in the vR session.
+
 
 **Labels**
 
@@ -438,13 +470,7 @@ are a list of ID's separated by line breaks
 
 A simple way to add textlabels at certain positions to a specific layout (namespace)
 
-**Attributes**
 
-|node_id|attribute_id|namespace|name|description|
-|---|---|---|---|---|
-|16048|4416|DISEASE|"Down syndrome"|NULL|
-
-Every node id can be associated with several attributes.
 
 **Note**
 
