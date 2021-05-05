@@ -557,7 +557,7 @@ This list will grow in the future.
 | **Analytics Module** |**UI Module** |**VR Module** |
 |---|---|---|
 |Win, Mac, Linux|Win, Mac, Linux|Win 10|
-|pyton==3.6 <br> click==7.1.2 <br> decorator==4.4.2 <br> fisher==0.1.9 <br> Flask==1.1.2 <br> Flask-Cors==3.0.8 <br> itsdangerous==1.1.0 <br> Jinja2==2.11.2 <br> MarkupSafe==1.1.1 <br> networkx==2.4 <br> numpy==1.19.4 <br> pandas==1.2.0 <br> PyMySQL==0.9.3 <br> python-dateutil==2.8.1 <br> pytz==2020.5 <br> six==1.15.0 <br> Werkzeug==0.16.1 <br> jquery==3.4.1 <br> jquery-ui | pyton==3.6 <br> Flask==1.1.2 <br> Flask-Cors==3.0.8 <br> jquery==3.4.1 <br> jquery-ui <br> d3v4 | Direct X Runtime  <br> SteamVR|
+|pyton==3.6 <br> click==7.1.2 <br> decorator==4.4.2 <br> fisher==0.1.9 <br> Flask==1.1.2 <br> Flask-Cors==3.0.8 <br> itsdangerous==1.1.0 <br> Jinja2==2.11.2 <br> MarkupSafe==1.1.1 <br> networkx==2.4 <br> numpy==1.19.4 <br> pandas==1.2.0 <br> PyMySQL==0.9.3 <br> python-dateutil==2.8.1 <br> pytz==2020.5 <br> six==1.15.0 <br> Werkzeug==0.16.1 <br> jquery==3.4.1 <br> jquery-ui | pyton==3.6 <br> Flask==1.1.2 <br> Flask-Cors==3.0.8 <br> jquery==3.4.1 <br> jquery-ui <br> d3v4 | Epic Unreal Engine 4.23 <br> WebUI by Tracer Interactive <br> Direct X Runtime  <br> SteamVR|
 
 ## **Data availability**
 
