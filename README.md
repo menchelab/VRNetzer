@@ -80,7 +80,7 @@ you have now a clone of our database on your local machine.
 
 ### **2.) Clone the [Analytics Module repository](https://github.com/menchelab/Analytics_Module)** into a new folder somewhere on your computer called "VRNetzer"
 
-- install [python >3.6,](https://www.python.org/downloads/) make sure its added to path variable
+- install [python >3.6 <3.9,](https://www.python.org/downloads/) make sure its added to path variable
 - install [pip](https://pypi.org/project/pip/) for python
 
 - edit VRNetzer/Analytics_Module/db_config.py to match the database host and user you created before and save
