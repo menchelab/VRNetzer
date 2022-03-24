@@ -55,7 +55,7 @@ You can [get in touch](mailto:vrnetzer@menchelab.com) with us if you would like 
 
  and a VR HEADSET - we tested the following:
  - HTC VIVE VR Headset + controllers
- - OCULUS QUEST + controllers
+ - OCULUS QUEST (tethered to windows with link) + controllers
 
 ## **Installation: Quick Start** 
 Time required ~ 10min
