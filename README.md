@@ -1,3 +1,5 @@
+## THERE IS A NEW VERSION OF THIS BEING DEVELOPED HERE: [DataDiVR](https://github.com/menchelab/DataDiVR_WebApp) PLEASE USE THE NEW VERSION IF YOU WANT TO TRY THE APPLICATION, THIS REPOSITORY IS ONLY HERE FOR HISTORIC REASONS
+
 ## **VRNetzer - A Virtual Reality Framework for Network Visualization and Analytics**
 
 ![alt text](pictures/DataDiVR_Fig_1b_notext.png)
